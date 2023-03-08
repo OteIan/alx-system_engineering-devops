@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'Print Working Directory'
+echo 'List Content of Working Directory'
