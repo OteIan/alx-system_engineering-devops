@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'List Contents in Long Format'
+echo 'List More Contents in Long Format'
