@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'List More Contents in Long Format'
+echo 'Create Directory Named /tmp/my_first_directory'
