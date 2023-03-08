@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'List Content of Working Directory'
+echo 'Change Working Directory To User's Home Directory'
