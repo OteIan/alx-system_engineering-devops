@@ -335,6 +335,7 @@ Requirements:
 ### 12. Tell the story of passwd `#advanced`
 
 Read:
+
 * [IFS (internal field separator)](https://intranet.alxswe.com/rltoken/8VeAz2XHCtuECDJ0PfMNIg)
 * [Understanding /etc/passwd](https://intranet.alxswe.com/rltoken/jm2-sSa3VlvI4zgRdreAsg)
 
