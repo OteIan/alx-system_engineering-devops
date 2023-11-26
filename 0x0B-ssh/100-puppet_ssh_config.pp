@@ -1,18 +1,18 @@
-#!/usr/bin/pup
-# Configure the SSH server to refuse authentication with a password
+#!/usr/bin/env bash
+# Using puppet to connect without a password
 
-include stdlib
+file { '/etc/ssh/sshd_config':
+  ensure => present,
+}
 
 file_line { 'Turn off passwd auth':
-  ensure  => present,
-  path    => '/etc/ssh/sshd_config',
-  line    => 'PasswordAuthentication no',
-  replace => true,
+  path  => '/etc/ssh/ssh_config',
+  line  => 'PasswordAuthentication no',
+  match => '^#Paswordauthentication',
 }
 
 file_line { 'Declare identity file':
-  ensure  => present,
-  path    => '/etc/ssh/sshd_config',
-  line    => '	IdentityFile ~/.ssh/school',
-  replace => true,
+  path  => '/etc/ssh/ssh_config',
+  line  => 'IdentityFile ~/.ssh/school',
+  match => '^#IdentityFile',
 }
