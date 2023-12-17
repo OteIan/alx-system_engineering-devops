@@ -1,0 +1,26 @@
+# What happens when you type "www.google.com" and press 'Enter'
+
+DNS REQUEST
+
+The process begins with the server sending a query to a DNS server asking for the ip address associated with “www.google.com”. The DNS server returns the ip address of the url thus translating the human readable domain names to machine readable domain names
+
+TCP/IP
+Once the browser has the IP address, it establishes a TCP (Transmission Control Protocol) connection with the server using IP (Internet Protocol). This method ensures reliable data transfer by breaking down the information to be sent in form of packets to ensure no information is lost along the process.
+
+Firewall
+As data travels through the internet it may encounter security barriers to monitor and control incoming and outgoing network traffic. Firewalls help to protect against unauthorized threats thus ensuring secure data flow.
+
+HTTPS/SSL
+The communication between and the server is secured through HTTPS(HyperText Transfer Protocol Secure). This security is achieved through SSL/TLS (Secure Sockets Layer/Transport Layer Security) protocols which encrypt the data thus safeguarding it from potential tampering.
+
+Load balancer
+This distributes incoming network traffic across multiple servers ensuring optimal resource optimization and preventing server overload.
+
+Web server
+Upon receiving the request, the web server handles the HTTP request, processes it and generates an appropriate response.
+
+Application server
+For more dynamic content or server side processing, the web server communicates with the application server. This server executes the business logic, interacts with databases and generates dynamic content
+
+Database
+If the requested content involves data retrieval or data storage, the application server communicates with a database server. Databases store and manage the structured information needed for the web application to function.
