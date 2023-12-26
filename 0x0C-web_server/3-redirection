@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Installing nginx web server
+
+sudo apt-get update
+sudo apt install -y nginx
+sudo service nginx start
+
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+printf '%s\n' "server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	root /var/www/html;
+	index index.html index.htm index.nginx-debian.html;
+
+	location /redirect_me {
+		return 301 https://youtu.be/dQw4w9WgXcQ?si=4eKmpn0ZWl2V2Doq;
+	}
+}
+" | sudo tee /etc/nginx/sites-available/default > /dev/null
+
+sudo service nginx reload
