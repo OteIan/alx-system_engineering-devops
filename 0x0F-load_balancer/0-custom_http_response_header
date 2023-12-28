@@ -7,13 +7,12 @@ sudo service nginx start
 
 echo "Hello World!" | sudo tee www/html/index.html
 
-echo "This is not a page" | sudo tee www/html/404.html
-
+echo "Ceci n'est pas une page" | sudo tee www/html/404.html
 printf '%s\n' "server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 
-	add_header X-Served-By '\$(hostname)';
+	add_header X-Served-By \$hostname;
 
 	root /var/www/html;
 	index index.html index.htm index.nginx-debian.html;
