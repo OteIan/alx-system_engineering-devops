@@ -14,8 +14,8 @@ if __name__ == "__main__":
     todos = requests.get(url + f"todos", params={"userId": id}).json()
 
     result = {id: [{"task": i['title'],
-               "completed": i['completed'],
-               "username": user['username']} for i in todos]}
+                    "completed": i['completed'],
+                    "username": user['username']} for i in todos]}
 
     file_name = f"{id}.json"
     with open(file_name, "w") as f:
