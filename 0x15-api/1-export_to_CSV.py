@@ -14,5 +14,5 @@ if __name__ == "__main__":
     file_name = f"{id}.csv"
     with open(file_name, "w") as f:
         for i in todos:
-            f.write(f'"{id}", "{user["username"]}", "{i["completed"]}",')
-            f.write(f' "{i["title"]}"\n')
+            f.write(f'"{id}","{user["username"]}","{i["completed"]}",')
+            f.write(f'"{i["title"]}"\n')
