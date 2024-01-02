@@ -8,7 +8,7 @@ if __name__ == "__main__":
     id = argv[1]
 
     user = requests.get(url + f"users/{id}").json()
-    todos = requests.get(url + f"todos", params={"userId": {id}}).json()
+    todos = requests.get(url + f"todos", params={"userId": id}).json()
 
     tasks = [i.get("title") for i in todos if i.get("completed")]
     print(f"Employee {user.get('name')} is done with ", end="")
