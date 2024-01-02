@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Returns Todo list for a given employee id
 and dumps into a json file"""
+import json
 import requests
 from sys import argv
-import json
 
 
 if __name__ == "__main__":
