@@ -12,11 +12,6 @@ if __name__ == "__main__":
     user = requests.get(url + f"users/{id}").json()
     todos = requests.get(url + f"todos", params={"userId": id}).json()
 
-    # tasks = [i.get("title") for i in todos if i.get("completed")]
-    # print(f"Employee {user.get('name')} is done with ", end="")
-    # print(f"tasks({len(tasks)}/{len(todos)}):")
-    # [print(f"\t {i}") for i in tasks]
-
     r = {id: [{"task": i['title'],
                "completed": i['completed'],
                "username": user['username']} for i in todos]}
