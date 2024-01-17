@@ -2,8 +2,8 @@
 """
 Reddit Subreddit Subscribers Counter
 
-This script provides a function to retrieve the number of subscribers for a given subreddit
-using the Reddit API.
+This script provides a function to retrieve the number of subscribers for
+a given subreddit using the Reddit API.
 """
 import requests
 
