@@ -24,7 +24,7 @@ def recurse(subreddit, hot_list=[], after="", count=0):
 
     if response.status_code == 400:
         return None
-    
+
     data = response.json().get('data')
     after = data.get('after')
     count += data.get('dist')
@@ -33,5 +33,5 @@ def recurse(subreddit, hot_list=[], after="", count=0):
 
     if after is not None:
         return recurse(subreddit, hot_list, after, count)
-    
+
     return hot_list
