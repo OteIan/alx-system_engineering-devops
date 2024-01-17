@@ -1,3 +1,4 @@
+# Using Puppet to fix an Apache server returning a 500 error
 file { '/var/www/html/wp-settings.php':
     ensure => file,
 }
