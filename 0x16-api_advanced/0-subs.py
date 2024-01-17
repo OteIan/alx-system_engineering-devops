@@ -16,9 +16,11 @@ def number_of_subscribers(subreddit):
     Returns:
     - int: The number of subscribers for the specified subreddit.
     """
-    url = 'https://www.reddit.com/r/' + subreddit + '/about.json'
+    url = f'https://www.reddit.com/r/{subreddit}/about.json'
+    header = {'User-Agent':
+              'wsl:0x16.api.advanced:v1.0.0 (by /u/konohafinest)'}
 
-    response = requests.get(url, headers={'User-Agent': 'YourApp/1.0'},
+    response = requests.get(url, headers=header,
                             allow_redirects=False)
 
     if response.status_code == 200:
