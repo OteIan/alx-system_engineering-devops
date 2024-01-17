@@ -1,11 +1,20 @@
 #!/usr/bin/python3
 """
+Reddit Subreddit Subscribers Counter
+
+This script provides a function to retrieve the number of subscribers for a given subreddit
+using the Reddit API.
 """
 import requests
 
 
 def number_of_subscribers(subreddit):
     """
+    Parameters:
+    - subreddit (str): The name of the subreddit.
+
+    Returns:
+    - int: The number of subscribers for the specified subreddit.
     """
     url = 'https://www.reddit.com/r/' + subreddit + '/about.json'
 
