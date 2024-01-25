@@ -1,11 +1,11 @@
 # Fix high amount of requests
-exec {'replace':
-    provider => shell,
-    command  => 'sudo sed -i "s/ULIMIT=\"-n 15\"/ULIMIT=\"-n 4096\"/" /etc/default/nginx',
-    before   => Exec['restart'],
+file { '/etc/default/nginx':
+  ensure  => file,
+  content => "#This file is managed by puppet\n\nULIMIT=\"-n 4096\"\n",
+  notify  => Exec['restart_nginx'],
 }
 
-exec {'restart':
-    provider => shell,
-    command  => 'sudo service nfginx restart',
+exec { 'restart_nginx':
+  command     => '/etc/init.d/nginx restart',
+  refreshonly => true,
 }
